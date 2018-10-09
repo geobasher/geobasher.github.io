@@ -46,15 +46,6 @@
 									</ul>
 								</li> 
 								<li class="nav-item"><a class="nav-link" href="about-us.html">About Jack Gatrell</a></li> 
-								<!--<li class="nav-item"><a class="nav-link" href="services.html">Code</a>-->
-								<!--<li class="nav-item submenu dropdown">
-									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
-									<ul class="dropdown-menu">
-										<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-										<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
-									</ul>
-								</li>-->
-								<!--<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>-->
 							</ul>
 						</div>  
 					</div>
@@ -82,107 +73,13 @@
         <!--================End Home Banner Area =================-->
         
         <!--================Main Module =================-->
-        <script src="https://rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true&amp;skin=sunburst&amp;lang=css" defer></script>
-			<style type="text/css">
-			.operative { font-weight: bold; border: 1px solid yellow; }
-			#quine { border: 4px solid #88c; }
-			</style>
-			</head>
-
-			<body>
-			<h1>Making Quines Prettier</h1>
-
-			<p>
-			Below is the content of this page prettified.  The <code>&lt;pre&gt;</code>
-			element is prettified because it has <code>class="prettyprint"</code> and
-			because the sourced script loads a JavaScript library that styles source
-			code.
-			</p>
-
-			<p>
-			The line numbers to the left appear because the preceding comment
-			<code>&lt;?prettify lang=html linenums=true?&gt;</code> turns on
-			line-numbering and the
-			<a href="https://rawgit.com/google/code-prettify/master/styles/index.html">stylesheet</a>
-			(see <code>skin=default</code> in the <code>&lt;script src&gt;</code>)
-			specifies that every fifth line should be numbered.
-			</p>
-
-			<!-- Language hints can be put in XML application directive style comments. -->
-			<?prettify lang=html linenums=true?>
-			<pre class="prettyprint" id="quine"></pre>
-
-			<script type="text/javascript">//<![CDATA[
-			(function () {
-			  function htmlEscape(s) {
-				return s
-				  .replace(/&/g, '&amp;')
-				  .replace(/</g, '&lt;')
-				  .replace(/>/g, '&gt;');
-			  }
-			  // this page's own source code
-			  var quineHtml = htmlEscape(
-				'<!DOCTYPE html>\n<html>\n' +
-				document.documentElement.innerHTML +
-				'\n<\/html>\n');
-			  // Highlight the operative parts:
-			  quineHtml = quineHtml.replace(
-				/&lt;script src[\s\S]*?&gt;&lt;\/script&gt;|&lt;!--\?[\s\S]*?--&gt;|&lt;pre\b[\s\S]*?&lt;\/pre&gt;/g,
-				'<span class="operative">$&<\/span>');
-			  // insert into PRE
-			  document.getElementById("quine").innerHTML = quineHtml;
-			})();
-			//]]>
-		</script>	
-        <!--================End Projects Area =================-->
         
-        <!--================Testimonials Area =================-->
-        <!--<section class="testimonials_area p_120">
-        	<div class="container">
-        		<div class="main_title">
-        			<h2>Testimonials</h2>
-        			<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see some for as low as $.17 each.</p>
-        		</div>
-        		<div class="testi_inner">
-					<div class="testi_slider owl-carousel">
-						<div class="item">
-							<div class="testi_item">
-								<p>As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth. If you think about it, you travel across her face</p>
-								<h4>Fanny Spencer</h4>
-								<a href="#"><i class="fa fa-star"></i></a>
-								<a href="#"><i class="fa fa-star"></i></a>
-								<a href="#"><i class="fa fa-star"></i></a>
-								<a href="#"><i class="fa fa-star"></i></a>
-								<a href="#"><i class="fa fa-star-half-o"></i></a>
-							</div>
-						</div>
-						<div class="item">
-							<div class="testi_item">
-								<p>As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth. If you think about it, you travel across her face</p>
-								<h4>Fanny Spencer</h4>
-								<a href="#"><i class="fa fa-star"></i></a>
-								<a href="#"><i class="fa fa-star"></i></a>
-								<a href="#"><i class="fa fa-star"></i></a>
-								<a href="#"><i class="fa fa-star"></i></a>
-								<a href="#"><i class="fa fa-star-half-o"></i></a>
-							</div>
-						</div>
-						<div class="item">
-							<div class="testi_item">
-								<p>As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth. If you think about it, you travel across her face</p>
-								<h4>Fanny Spencer</h4>
-								<a href="#"><i class="fa fa-star"></i></a>
-								<a href="#"><i class="fa fa-star"></i></a>
-								<a href="#"><i class="fa fa-star"></i></a>
-								<a href="#"><i class="fa fa-star"></i></a>
-								<a href="#"><i class="fa fa-star-half-o"></i></a>
-							</div>
-						</div>
-					</div>
-        		</div>
-        	</div>
-        </section>-->
-        <!--================End Testimonials Area =================-->
+
+
+		
+        <!--================End Main Module =================-->
+        
+        
         
         <!--================Footer Area =================-->
         <footer class="footer_area p_120">
@@ -200,37 +97,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 </p>
         				</aside>
         			</div>
-        			<!--<div class="col-lg-5 col-sm-6">
-        				<aside class="f_widget news_widget">
-        					<div class="f_title">
-        						<h3>Newsletter</h3>
-        					</div>
-        					<p>Stay updated with our latest trends</p>
-        					<div id="mc_embed_signup">
-                                <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative">
-                                	<div class="input-group d-flex flex-row">
-                                        <input name="EMAIL" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email">
-                                        <button class="btn sub-btn"><span class="lnr lnr-arrow-right"></span></button>		
-                                    </div>				
-                                    <div class="mt-10 info"></div>
-                                </form>
-                            </div>
-        				</aside>
-        			</div>-->
-        			<!--<div class="col-lg-2">
-        				<aside class="f_widget social_widget">
-        					<div class="f_title">
-        						<h3>Follow Me</h3>
-        					</div>
-        					<p>Let us be social</p>
-        					<ul class="list">
-        						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-        						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-        						<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-        						<li><a href="#"><i class="fa fa-behance"></i></a></li>
-        					</ul>
-        				</aside>
-        			</div>-->
         		</div>
         	</div>
         </footer>
