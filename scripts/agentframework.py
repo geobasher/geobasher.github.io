@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Sep  8 12:20:34 2018
+Created on Wed Oct 10 10:11:19 2018
 
-@author: milli
+@author: Jack Gatrell
+
+The purpose of this module is to define agent location, movementment and attributes.
 """
+
 import random
 
 
@@ -13,21 +16,24 @@ class Agent:
         self._y = random.randint(0,99) 
         self.environment = environment
         self.agents = agents
-        self.store = 0  
-               
-    def x(self):
+        self.store = 0     
+                   
+    @property
+    def getx(self):
         return self._x
     
-    def y(self):
+    @property
+    def gety(self):
         return self._y
     
-    def set_x(self,x):
-        self._x = random.randint(0,99)
+    @getx.setter
+    def setx(self, value):
+        self.x = random.randint(0,99)
         
-    def set_y(self,y):
-        self._y = random.randint(0,99) 
-      
-        
+    @gety.setter
+    def sety(self, value):
+        self.y = random.randint(0,99)
+    
     def move(self):
         if random.random() <0.5:
             self._x = (self._x + 1) % 100
@@ -44,6 +50,9 @@ class Agent:
             self.environment[self._y][self._x] -= 10
             self.store += 10
     
+    def distance_between(self, agent):
+        return (((self._x - agent._x)**2) + ((self._y - agent._y)**2))**0.5
+    
     def share_with_neighbours(self, neighbourhood):
         for agent in self.agents:
             dist = self.distance_between(agent) 
@@ -53,6 +62,4 @@ class Agent:
                 self.store = ave
                 agent.store = ave
                 #print("sharing " + str(dist) + " " + str(ave))
-
-    def distance_between(self, agent):
-        return (((self._x - agent._x)**2) + ((self._y - agent._y)**2))**0.5
+   
